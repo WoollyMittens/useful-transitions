@@ -37,6 +37,7 @@ elements = useful.transitions.select({
 Select DOM elements based on a CSS rule.
 
 **rule : {string}** - A CSS rule that applies to the required elements.
+
 **parent : {DOM object}** - The parent node from which to select the elements. Default is *document*.
 
 ```javascript
@@ -51,6 +52,7 @@ useful.transitions.select({
 Apply scripts to DOM elements based on a CSS rule.
 
 **data : {object}** - An object of name-value pairs that will be passed to the handler together with the selected elements.
+
 **handler : {function}** - A function to send each of the selected elements to in turn as a separate instance. *e.g. myfunction(element, data);*
 
 By sending each element separately to the handler, more than one instance of the script can run on the same page without interfering with each other.
@@ -68,9 +70,13 @@ useful.transitions.byClass({
 (re)places a string in the class name to trigger either a CSS transition or a jQuery animation if available.
 
 **element : {DOM object}** - The DOM element to affect.
+
 **replaceThis : {string}** - The string to replace in the class name.
+
 **withThis : {string}** - The replacement string for the class name.
+
 **onComplete : {function}** - Function to run after the transition or animation completes. If no animation is possible, the function completes immediately.
+
 **duration : {integer}** - The duration for the animation, in case this number cannot be recovered from the stylesheet.
 
 ```javascript
@@ -84,6 +90,7 @@ useful.transitions.byRules({
 Applies inline properties to a DOM element to trigger either a CSS transition or a jQuery animation if available.
 
 **element : {DOM object}** - The DOM element to affect.
+
 **onComplete : {function}** - Function to run after the transition or animation completes. If no animation is possible, the function completes immediately.
 
 ```Javascript
@@ -105,7 +112,9 @@ useful.transitions.setNameValue(element, name, value);
 (re)places a string in the class name that represents a name-value pair. *e.g. name_value*
 
 **element : {DOM object}** - The DOM element to affect.
+
 **name : {string}** - The name part of the class name to add.
+
 **value : {string}** - The value part of the class name to add.
 
 ```javascript
@@ -115,7 +124,9 @@ value = useful.transitions.getNameValue(element, name, fallback);
 Returns a name-value pair that was stored in a class name. *e.g. name_value*
 
 **element : {DOM object}** - The DOM element to affect.
+
 **name : {string}** - The name part of the class name to add.
+
 **fallback : {string}** - The value part that gets returned if the name wasn't found in the element.
 
 ## License
