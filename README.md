@@ -24,6 +24,8 @@ To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5
 
 ## Functions
 
+### select
+
 ```javascript
 elements = useful.transitions.select(rule, parent);
 ```
@@ -57,6 +59,8 @@ Apply scripts to DOM elements based on a CSS rule.
 
 By sending each element separately to the handler, more than one instance of the script can run on the same page without interfering with each other.
 
+### byClass
+
 ```javascript
 useful.transitions.byClass({
 	element,
@@ -79,6 +83,8 @@ useful.transitions.byClass({
 
 **duration : {integer}** - The duration for the animation, in case this number cannot be recovered from the stylesheet.
 
+### byRules
+
 ```javascript
 useful.transitions.byRules({
 	element,
@@ -93,6 +99,10 @@ Applies inline properties to a DOM element to trigger either a CSS transition or
 
 **onComplete : {function}** - Function to run after the transition or animation completes. If no animation is possible, the function completes immediately.
 
+**css : {object}** - An object full of CSS properties and values.
+
+### Format of the css object
+
 ```Javascript
 css = {
 	'transitionProperty' : 'left,top',
@@ -103,7 +113,7 @@ css = {
 }
 ```
 
-**css : {object}** - An object full of CSS properties and values.
+### setNameValue
 
 ```javascript
 useful.transitions.setNameValue(element, name, value);
@@ -116,6 +126,8 @@ useful.transitions.setNameValue(element, name, value);
 **name : {string}** - The name part of the class name to add.
 
 **value : {string}** - The value part of the class name to add.
+
+### getNameValue
 
 ```javascript
 value = useful.transitions.getNameValue(element, name, fallback);
