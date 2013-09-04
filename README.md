@@ -4,12 +4,12 @@ A library of useful functions to ease working with CSS3 transitions.
 
 Try the <a href="http://www.woollymittens.nl/useful/default.php?url=transitions">tests</a>.
 
-## How to use the script
+## How to include the script
 
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful.transitions.js"></script>
+<script src="./js/transitions.min.js"></script>
 ```
 
 To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5.js*. To provide an alternative for *document.querySelectorAll* in Internet Explorer 8 and lower, include *jQuery*. To enable CSS3 transition animations in Internet Explorer 9 and lower, include *jQuery UI* as well.
@@ -22,7 +22,7 @@ To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5
 <![endif]-->
 ```
 
-## Functions
+## How to control the script
 
 ### select
 
@@ -140,6 +140,11 @@ Returns a name-value pair that was stored in a class name. *e.g. name_value*
 **name : {string}** - The name part of the class name to add.
 
 **fallback : {string}** - The value part that gets returned if the name wasn't found in the element.
+
+## Prerequisites
+
+To concatenate and minify the script yourself, the following prerequisites are required:
++ https://github.com/WoollyMittens/useful-polyfills
 
 ## License
 This work is licensed under a Creative Commons Attribution 3.0 Unported License. The latest version of this and other scripts by the same author can be found at http://www.woollymittens.nl/
