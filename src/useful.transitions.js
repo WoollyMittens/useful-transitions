@@ -36,7 +36,7 @@
 		// if there was a handler
 		if (typeof(input.handler) !== 'undefined') {
 			// for each element
-			for (a = 0 , b = elements.length; a < b; a += 1) {
+			for (a = 0, b = elements.length; a < b; a += 1) {
 				// run the handler and pass a unique copy of the data (in case it's a model)
 				input.handler(elements[a], input.data.create());
 			}
