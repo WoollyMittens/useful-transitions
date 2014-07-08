@@ -1,44 +1,41 @@
 /*
 	Example Styling for Useful Functions
 */
-@media all {
-  /* line 8, ../../src/scss/useful-transitions.scss */
-  .useful-tests dt {
-    font-weight: bold;
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  /* line 14, ../../src/scss/useful-transitions.scss */
-  .useful-tests dd {
-    display: block;
-    margin: 0 0 1.3em 0;
-    padding: 0;
-  }
+/* line 7, ../../src/scss/useful-transitions.scss */
+.useful-tests dt {
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+/* line 13, ../../src/scss/useful-transitions.scss */
+.useful-tests dd {
+  display: block;
+  margin: 0 0 1.3em 0;
+  padding: 0;
+}
 
-  /* line 20, ../../src/scss/useful-transitions.scss */
-  #transitions-test {
-    -webkit-transition: all ease;
-    -webkit-transition-delay: 500ms;
-    -moz-transition: all ease 500ms;
-    -o-transition: all ease 500ms;
-    transition: all ease 500ms;
-    border: solid 1px #333;
-    height: 150px;
-    left: 0;
-    margin-bottom: 1.3em;
-    padding: 1em;
-    width: 150px;
-    position: relative;
-  }
-  /* line 29, ../../src/scss/useful-transitions.scss */
-  #transitions-test.big {
-    height: 200px;
-    width: 200px;
-  }
-  /* line 33, ../../src/scss/useful-transitions.scss */
-  #transitions-test.small {
-    height: 100px;
-    width: 100px;
-  }
+/* line 19, ../../src/scss/useful-transitions.scss */
+#transitions-test {
+  -webkit-transition: all ease;
+  -webkit-transition-delay: 500ms;
+  -webkit-transition: all ease 500ms;
+          transition: all ease 500ms;
+  border: solid 1px #333;
+  height: 150px;
+  left: 0;
+  margin-bottom: 1.3em;
+  padding: 1em;
+  width: 150px;
+  position: relative;
+}
+/* line 28, ../../src/scss/useful-transitions.scss */
+#transitions-test.big {
+  height: 200px;
+  width: 200px;
+}
+/* line 32, ../../src/scss/useful-transitions.scss */
+#transitions-test.small {
+  height: 100px;
+  width: 100px;
 }
