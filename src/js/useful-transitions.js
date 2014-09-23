@@ -4,13 +4,6 @@
 
 	License:
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
-
-	Fallbacks:
-	<!--[if IE]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-	<![endif]-->
 */
 
 // public object
@@ -71,7 +64,7 @@ var useful = useful || {};
 			var replaceThis, replaceWith, endEventName, endEventFunction;
 			// validate the input
 			endEventHandler = endEventHandler || function () {};
-			endEventName = transitions.compatibility();
+			endEventName = this.compatibility();
 			// turn the classnames into regular expressions
 			replaceThis = new RegExp(removedClass.trim().replace(/ {2,}/g, ' ').split(' ').join('|'), 'g');
 			replaceWith = new RegExp(addedClass, 'g');
@@ -118,7 +111,7 @@ var useful = useful || {};
 			rules.transitionDuration = rules.transitionDuration || '300ms';
 			rules.transitionTimingFunction = rules.transitionTimingFunction || 'ease';
 			endEventHandler = endEventHandler || function () {};
-			endEventName = transitions.compatibility();
+			endEventName = this.compatibility();
 			// if CSS3 transitions are available
 			if (typeof endEventName !== 'undefined') {
 				// set the onComplete handler and immediately remove it afterwards
@@ -130,7 +123,7 @@ var useful = useful || {};
 				for (rule in rules) {
 					if (rules.hasOwnProperty(rule)) {
 						// implement the prefixed value
-						element.style[transitions.compatibility(rule)] = rules[rule];
+						element.style[this.compatibility(rule)] = rules[rule];
 						// implement the value
 						element.style[rule] = rules[rule];
 					}
@@ -158,7 +151,7 @@ var useful = useful || {};
 				for (rule in rules) {
 					if (rules.hasOwnProperty(rule)) {
 						// implement the prefixed value
-						element.style[transitions.compatibility(rule)] = rules[rule];
+						element.style[this.compatibility(rule)] = rules[rule];
 						// implement the value
 						element.style[rule] = rules[rule];
 					}
