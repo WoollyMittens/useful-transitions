@@ -1,0 +1,29 @@
+/*
+	Example Styling for Useful Functions
+*/
+.useful-tests dt {
+  font-weight: bold;
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+.useful-tests dd {
+  display: block;
+  margin: 0 0 1.3em 0;
+  padding: 0; }
+
+#transitions-test {
+  transition: all ease 500ms;
+  border: solid 1px #333;
+  height: 150px;
+  left: 0;
+  margin-bottom: 1.3em;
+  padding: 1em;
+  width: 150px;
+  position: relative; }
+  #transitions-test.big {
+    height: 200px;
+    width: 200px; }
+  #transitions-test.small {
+    height: 100px;
+    width: 100px; }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>useful-transitions.js: A library of useful functions to ease working with CSS3 Transitions.</title>
+		<style>
+			html { font-family:Sans-Serif; font-size:75%; height:100%; }
+			body { _height:100%; line-height:180%; margin:0; min-height:100%; padding:1%; }
+			.example { max-width:960px; margin:0 auto; padding:0; clear:both; }
+			.example > article, .example > aside { width:98%; padding:2%; }
+			.example-left > article, .example-left > aside { width:48%; padding:1%; float:left; }
+			.example-right > article, .example-right > aside { width:48%; padding:1%; float:right; }
+		</style>
+		<!--[if lte IE 9]>
+			<meta http-equiv="imagetoolbar" content="no"/>
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<section class="example example-right">
+			<article>
+				<h2>CSS3 Transitions Library</h2>
+				<p>A library of useful functions to ease working with CSS3 Transitions.</p>
+				<p><a class="button downloadButton" href="http://github.com/WoollyMittens/useful-transitions" target="_blank">Download (GitHub)</a></p>
+			</article>
+			<aside>
+
+				<!-- Cut below this -->
+				<style>@import url("./css/useful-transitions.css");</style>
+				<script src="./js/useful-transitions.js"></script>
+				<div class="useful-tests">
+					<p>
+						The output of these tests is reported using <strong>console.log();</strong>.<br/>
+						Be sure to open the developer console first.
+					</p>
+					<dl>
+						<dt>useful.transitions</dt>
+						<dd>
+							<div id="transitions-test" class="small">Hello world!</div>
+							<script>
+							//<!--
+								var transitionsTest = document.getElementById('transitions-test');
+							//-->
+							</script>
+							<button onclick="console.log(useful.transitions.select('.useful-tests dd'));">Select all DD elements</button><br/>
+						</dd>
+						<dd>
+							<button onclick="useful.transitions.byClass(transitionsTest, 'small', 'big', function(){console.log('done')}, 500);">Change class name</button><br/>
+						</dd>
+						<dd>
+							<button onclick="useful.transitions.byRules(transitionsTest, {'left' : '100px'}, function(){console.log('done')});">Change inline style</button><br/>
+						</dd>
+					</dl>
+				</div>
+				<!-- Cut above this -->
+
+			</aside>
+		</section>
+	</body>
+</html>
