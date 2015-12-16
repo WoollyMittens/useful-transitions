@@ -2,7 +2,7 @@
 
 A library of useful functions to ease working with CSS3 transitions.
 
-Try the <a href="http://www.woollymittens.nl/useful/default.php?url=useful-transitions">tests</a>.
+Try the <a href="http://www.woollymittens.nl/default.php?url=useful-transitions">tests</a>.
 
 ## How to include the script
 
