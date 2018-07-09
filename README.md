@@ -1,4 +1,4 @@
-# useful.transitions.js: CSS3 Transitions Library
+# transitions.js: CSS3 Transitions Library
 
 A library of useful functions to ease working with CSS3 transitions.
 
@@ -9,15 +9,7 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-transitions"
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful-viewer.js"></script>
-```
-
-To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5.js*.
-
-```html
-<!--[if lte IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<script src="./js/viewer.js"></script>
 ```
 
 ## How to control the script
@@ -25,11 +17,11 @@ To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5
 ### select
 
 ```javascript
-elements = useful.transitions.select(rule, parent);
+elements = transitions.select(rule, parent);
 ```
 
 ```javascript
-elements = useful.transitions.select({
+elements = transitions.select({
 	rule : '#id.classname',
 	parent : document
 });
@@ -41,7 +33,7 @@ Select DOM elements based on a CSS rule.
 **parent : {DOM object}** - The parent node from which to select the elements. Default is *document*.
 
 ```javascript
-useful.transitions.select({
+transitions.select({
 	rule : '.example',
 	parent : document,
 	data : {'foo':'bar'},
@@ -60,7 +52,7 @@ By sending each element separately to the handler, more than one instance of the
 ### byClass
 
 ```javascript
-useful.transitions.byClass({
+transitions.byClass({
 	element,
 	replaceThis,
 	withThis,
@@ -84,7 +76,7 @@ useful.transitions.byClass({
 ### byRules
 
 ```javascript
-useful.transitions.byRules({
+transitions.byRules({
 	element,
 	css,
 	onComplete = function () {}
@@ -114,7 +106,7 @@ css = {
 ### setNameValue
 
 ```javascript
-useful.transitions.setNameValue(element, name, value);
+transitions.setNameValue(element, name, value);
 ```
 
 (re)places a string in the class name that represents a name-value pair. *e.g. name_value*
@@ -128,7 +120,7 @@ useful.transitions.setNameValue(element, name, value);
 ### getNameValue
 
 ```javascript
-value = useful.transitions.getNameValue(element, name, fallback);
+value = transitions.getNameValue(element, name, fallback);
 ```
 
 Returns a name-value pair that was stored in a class name. *e.g. name_value*
@@ -153,15 +145,6 @@ The following commands are available for development:
 + `gulp watch` - Continuously recompiles updated files during development sessions.
 + `gulp serve` - Serves the project on a temporary web server at http://localhost:8500/.
 + `gulp php` - Serves the project on a temporary php server at http://localhost:8500/.
-
-## How to test the script
-
-These test uses Selenium from http://docs.seleniumhq.org/
-
-+ `npm install webdriverjs` - Installs the webdriver prerequisite.
-+ `npm install mocha -g` - Installs the prerequisite test framework.
-+ `java -jar /Applications/Selenium/selenium-server-standalone-2.42.2.jar` - Starts Selenium.
-+ `mocha` - Runs the automated tests.
 
 ## License
 
