@@ -9,7 +9,23 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-transitions"
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/viewer.js"></script>
+<script src="./js/transitions.js"></script>
+```
+
+Or use [Require.js](https://requirejs.org/).
+
+```js
+requirejs([
+	'js/transitions.js'
+], function(transitions) {
+	...
+});
+```
+
+Or import into an MVC framework.
+
+```js
+var transitions = require('js/transitions.js');
 ```
 
 ## How to control the script
